@@ -1,0 +1,163 @@
+set_robust_list(0x7f3d3e2709e0, 24)     = 0
+futex(0x7f3d3e47e4c0, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+futex(0x7f3d3e47e4c0, FUTEX_WAKE_PRIVATE, 1) = 0
+write(1, "INFO: [SOCK]SOCK_AcceptConnectio"..., 112) = 112
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=1, tv_nsec=0}, 0x7f3d3e26fa10) = 0
+read(4, "\3\0\30\0this is Request Message.\0\0\0\0"..., 1030) = 1030
+write(1, "INFO: [SOCK]RECV[thread:13990101"..., 93) = 93
+write(4, "\4\0\34\0this is Response Message(0)."..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 85) = 85
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\34\0this is Response Message(1)."..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 85) = 85
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\34\0this is Response Message(2)."..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 85) = 85
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\34\0this is Response Message(3)."..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 85) = 85
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\34\0this is Response Message(4)."..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 85) = 85
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\34\0this is Response Message(5)."..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 85) = 85
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\34\0this is Response Message(6)."..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 85) = 85
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\34\0this is Response Message(7)."..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 85) = 85
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\34\0this is Response Message(8)."..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 85) = 85
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\34\0this is Response Message(9)."..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 85) = 85
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(10)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(11)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(12)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(13)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(14)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(15)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(16)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(17)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(18)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(19)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(20)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(21)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(22)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(23)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(24)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(25)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(26)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(27)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(28)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(29)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(30)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(31)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(32)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(33)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(34)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(35)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(36)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(37)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(38)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(39)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(40)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(41)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(42)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(43)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(44)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(45)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(46)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(47)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(48)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\35\0this is Response Message(49)"..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13990101"..., 86) = 86
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+close(4)                                = 0
+write(1, "INFO: [SOCK]CLSE[sock:4 ret:0]\r\n", 32) = 32
+write(1, "INFO: [SOCK]SOCK_AcceptConnectio"..., 84) = 84
+madvise(0x7f3d3da70000, 8368128, MADV_DONTNEED) = 0
+exit(0)                                 = ?
++++ exited with 0 +++

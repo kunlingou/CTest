@@ -1,0 +1,16 @@
+set_robust_list(0x7f4b242c09e0, 24)     = 0
+futex(0x7f4b244ce4c0, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+futex(0x7f4b244ce4c0, FUTEX_WAKE_PRIVATE, 1) = 0
+write(1, "INFO: [SOCK]SOCK_AcceptConnectio"..., 112) = 112
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=1, tv_nsec=0}, 0x7f4b242bfa10) = 0
+read(4, "", 1030)                       = 0
+write(1, "INFO: [SOCK]RECV[thread:13996070"..., 68) = 68
+write(4, "\4\0\34\0this is Response Message(0)."..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13996070"..., 85) = 85
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\34\0this is Response Message(1)."..., 1030) = 1030
+write(1, "INFO: [SOCK]SEND[thread:13996070"..., 85) = 85
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000}, NULL) = 0
+write(4, "\4\0\34\0this is Response Message(2)."..., 1030) = -1 EPIPE (Broken pipe)
+--- SIGPIPE {si_signo=SIGPIPE, si_code=SI_USER, si_pid=12384, si_uid=1000} ---
++++ killed by SIGPIPE +++
