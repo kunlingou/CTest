@@ -11,7 +11,8 @@
         "pthread.h": "c",
         "unistd.h": "c",
         "features.h": "c",
-        "random": "c"
+        "random": "c",
+        "typeinfo": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

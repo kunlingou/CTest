@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <time.h>
 
 #include "proto.h"
 
@@ -57,6 +58,8 @@ UINT8 *getSipHdFromPcap(CHAR *fileName, UINT8 *dataPtr, UINT32 dataLen)
 
 #define SIP_CSEQ_INVITE(ptr)  (((ntohll(*(UINT64*)(ptr)) >> 16) & 0x0000494e56495445) == 0x0000494e56495445)
 
+#define SIP_CSEQ_INVITE2(ptr)  ((((*(UINT64*)(ptr))) & 0x0000455449564e49) == 0x0000455449564e49)
+
 int str2int(CHAR *str, int* intlen)
 {
     int val = 0;
@@ -104,7 +107,7 @@ CHAR *g_sipMethodStr[E_SIP_METHOD_BUTT] = {
     "INVITE"
 };
 
-int main()
+int main1()
 {
 
     UINT32 dataLen = 1200;
@@ -162,4 +165,59 @@ int main()
     writeLog("SIP msgType = %s, method = %s, seqNum = %u, statusCode = %u!", g_sipMsgTypeStr[sipInfo.msgType], g_sipMethodStr[sipInfo.method], sipInfo.seq, sipInfo.statusCode);
 
     return 0;
+}
+
+int main2()
+{
+    CHAR *str = "INVITE sip:test@10.0.2.15:5060 SIP/2.0";
+
+    UINT32 tryTimes = 1000000000;
+
+    UINT32 cnt = 0;
+
+    clock_t start_t;
+
+    usleep(1000000);
+
+    cnt = 0;
+    start_t = clock();
+
+    for (UINT32 i = 0; i < tryTimes; i++) {
+        if (strncmp("INVITE", str, 6) == 0) {
+            cnt++;
+        }
+    }
+
+    writeLog("SIP strncmp cost %ld time, cnt = %u!", clock() - start_t, cnt);
+
+    usleep(1000000);
+
+    cnt = 0;
+    start_t = clock();
+
+    for (UINT32 i = 0; i < tryTimes; i++) {
+        if (SIP_CSEQ_INVITE(str)) {
+            cnt++;
+        }
+    }
+
+    writeLog("SIP uint64 notohll cost %ld time, cnt = %u!", clock() - start_t, cnt);
+
+    usleep(1000000);
+
+    cnt = 0;
+    start_t = clock();
+
+    for (UINT32 i = 0; i < tryTimes; i++) {
+        if (SIP_CSEQ_INVITE2(str)) {
+            cnt++;
+        }
+    }
+
+    writeLog("SIP uint64 no ntohll cost %ld time, cnt = %u!", clock() - start_t, cnt);
+}
+
+int main()
+{
+    return main2();
 }
