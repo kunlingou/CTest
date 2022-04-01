@@ -12,7 +12,8 @@
         "unistd.h": "c",
         "features.h": "c",
         "random": "c",
-        "typeinfo": "c"
+        "typeinfo": "c",
+        "functional": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
