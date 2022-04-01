@@ -19,6 +19,9 @@
 int majorityElement(int* nums, int numsSize)
 {
     sort_bubble(nums, numsSize);
+
+    // num = 10 => i = 4, 5
+    // num = 9  => i = 4
     return nums[numsSize / 2];
 }
 

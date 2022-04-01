@@ -17,7 +17,5 @@ void sort_bubble(int* nums, int numsSize)
         }
     }
 
-    // num = 10 => i = 4, 5
-    // num = 9  => i = 4
     return;
 }
