@@ -56,7 +56,7 @@ int main(int argc, char** argv)
         if (result == expect[i]) {
             printf("testCase[%d] execute success.\r\n", i);
         } else {
-            printf("testCase[%d] execute failure.\r\n");
+            printf("testCase[%d] execute failure.\r\n", i);
         }
     }
     return 0;
