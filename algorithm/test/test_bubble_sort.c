@@ -25,18 +25,18 @@ int majorityElement(int* nums, int numsSize)
     return nums[numsSize / 2];
 }
 
-#define CASE_NUM 4
+#define test_majority_element_CASE_NUM 4
 
-int main(int argc, char** argv)
+int test_majority_element(int argc, char** argv)
 {
-    int numsArr[CASE_NUM][10] = {
+    int numsArr[test_majority_element_CASE_NUM][10] = {
         {3, 3, 3, 4},
         {7, 2, 2, 1, 1, 1, 2, 2},
         {3, 3, 2, 3},
         {3, 2, 3, 3}
     };
 
-    int expect[CASE_NUM] = {
+    int expect[test_majority_element_CASE_NUM] = {
         3,
         2,
         3,
@@ -46,7 +46,7 @@ int main(int argc, char** argv)
     int *nums = NULL;
     int num;
 
-    for (int i = 0; i < CASE_NUM; i++) {
+    for (int i = 0; i < test_majority_element_CASE_NUM; i++) {
 
         nums = &numsArr[i][1];
         num  =  numsArr[i][0];
@@ -54,9 +54,53 @@ int main(int argc, char** argv)
         int result = majorityElement(nums, num);
 
         if (result == expect[i]) {
-            printf("testCase[%d] execute success.\r\n", i);
+            // printf("testCase[%d] execute success.\r\n", i);
         } else {
             printf("testCase[%d] execute failure.\r\n", i);
+            return -1;
+        }
+    }
+    return 0;
+}
+
+#define TEST_BUBBLE_SORT_CASE_NUM 5
+
+int test_bubble_sort(int argc, char** argv)
+{
+    int numsArr[TEST_BUBBLE_SORT_CASE_NUM][10] = {
+        {3, 3, 3, 4},
+        {7, 2, 2, 1, 1, 1, 2, 2},
+        {3, 3, 2, 3},
+        {3, 2, 3, 3},
+        {8, 10, 9, 8, 7, 6, 5, 4, 3}
+    };
+
+    int expectArr[TEST_BUBBLE_SORT_CASE_NUM][10] = {
+        {3, 3, 4},
+        {1, 1, 1, 2, 2, 2, 2},
+        {2, 3, 3},
+        {2, 3, 3},
+        {3, 4, 5, 6, 7, 8, 9, 10}
+    };
+
+    int *nums = NULL;
+    int num;
+    int *expect = NULL;
+
+    for (int i = 0; i < TEST_BUBBLE_SORT_CASE_NUM; i++) {
+
+        nums = &numsArr[i][1];
+        num  =  numsArr[i][0];
+
+        sort_bubble(nums, num);
+
+        expect = expectArr[i];
+
+        for (int j = 0; j < num; j++) {
+            if (nums[j] != expect[j]) {
+                printf("testCase[%d] execute failure expect [%d] = %d, actual = %d.\r\n", i, j, expect[j], nums[j]);
+                return -1;
+            }
         }
     }
     return 0;

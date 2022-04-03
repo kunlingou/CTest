@@ -41,7 +41,7 @@ void sort_bubble(int* nums, int numsSize)
             if (nums[j] > nums[j + 1]) {
                 tmp = nums[j];
                 nums[j] = nums[j + 1];
-                nums[j + 1] = tmp; 
+                nums[j + 1] = tmp;
             }
         }
         if (tmp == INT_INVALID_VAL) {
