@@ -1,4 +1,4 @@
-set(BIN_NAME test)
+set(BIN_NAME test_main)
 
 include_directories(
     ${PROJECT_SOURCE_DIR}/src/bubble_sort/

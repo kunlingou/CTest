@@ -9,5 +9,5 @@ cd ..
 rm -rf __cache__
 
 echo "==================run llt start====================="
-../output/test
+../output/test_main
 echo "==================run llt end====================="
