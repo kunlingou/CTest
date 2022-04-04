@@ -25,20 +25,21 @@
  * 
  * 第3轮（比较4次）：
  *  1, 10, 35, 36, 55, 61, 89
+ * 
+ * 优化点：
+ *     1. 当发现当前轮次无交换时，说明已经达到最终结果，不再继续往下比较。
+ *     2. 每一轮获取当前轮次第1次替换的位置，下一次从当前位置-1处开始比较。 ---- 效果不好，实现参考sort_bubble2
  */
 
 #define INT_INVALID_VAL 0xFFFFFFFF
 
 void sort_bubble(int* nums, int numsSize)
 {
-    // num = 10
-    // i = 0 => j = 0->8
-    // i = 1 => j = 0->7
     int tmp;
     for (int i = 0; i < numsSize; i++) {
         tmp = INT_INVALID_VAL;
         for (int j = 0; j < numsSize - i - 1; j++) {
-            if (nums[j] > nums[j + 1]) {
+            if (nums[j] > nums[j +1]) {
                 tmp = nums[j];
                 nums[j] = nums[j + 1];
                 nums[j + 1] = tmp;
@@ -47,6 +48,46 @@ void sort_bubble(int* nums, int numsSize)
         if (tmp == INT_INVALID_VAL) {
             break;
         }
+#ifdef __DEBUG__
+        printf("nums: ");
+        for (int k = 0; k < numsSize; k++) {
+            printf("%d ", nums[k]);
+        }
+        printf("start = %d", start);
+        printf("\r\n");
+#endif
+    }
+
+    return;
+}
+
+void sort_bubble2(int* nums, int numsSize)
+{
+    int tmp;
+    int start = 0;
+    for (int i = 0; i < numsSize; i++) {
+        tmp = INT_INVALID_VAL;
+        for (int j = start; j < numsSize - i - 1; j++) {
+            if (nums[j] > nums[j + 1]) {
+                if (tmp == INT_INVALID_VAL && j > 0) {
+                    start = j - 1;
+                }
+                tmp = nums[j];
+                nums[j] = nums[j + 1];
+                nums[j + 1] = tmp;
+            }
+        }
+        if (tmp == INT_INVALID_VAL) {
+            break;
+        }
+#ifdef __DEBUG__
+        printf("nums: ");
+        for (int k = 0; k < numsSize; k++) {
+            printf("%d ", nums[k]);
+        }
+        printf("start = %d", start);
+        printf("\r\n");
+#endif
     }
 
     return;

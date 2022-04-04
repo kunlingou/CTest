@@ -1,1 +1,1 @@
-add_subdirectory(bubble_sort)
+add_subdirectory(sort_bubble)

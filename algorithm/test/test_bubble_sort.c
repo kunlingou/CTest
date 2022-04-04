@@ -13,6 +13,7 @@
  * 要求：时间复杂度为 O(n)、空间复杂度为 O(1)
  */
 #include <stdio.h>
+#include <sys/times.h>
 
 #include "sort_bubble.h"
 
@@ -63,7 +64,7 @@ int test_majority_element(int argc, char** argv)
     return 0;
 }
 
-#define TEST_BUBBLE_SORT_CASE_NUM 5
+#define TEST_BUBBLE_SORT_CASE_NUM 7
 
 int test_bubble_sort(int argc, char** argv)
 {
@@ -72,7 +73,9 @@ int test_bubble_sort(int argc, char** argv)
         {7, 2, 2, 1, 1, 1, 2, 2},
         {3, 3, 2, 3},
         {3, 2, 3, 3},
-        {8, 10, 9, 8, 7, 6, 5, 4, 3}
+        {8, 10, 9, 8, 7, 6, 5, 4, 3},
+        {8, 1, 2, 3, 4, 1, 2, 3, 4},
+        {8, 1, 2, 3, 4, 8, 7, 6, 5}
     };
 
     int expectArr[TEST_BUBBLE_SORT_CASE_NUM][10] = {
@@ -80,28 +83,39 @@ int test_bubble_sort(int argc, char** argv)
         {1, 1, 1, 2, 2, 2, 2},
         {2, 3, 3},
         {2, 3, 3},
-        {3, 4, 5, 6, 7, 8, 9, 10}
+        {3, 4, 5, 6, 7, 8, 9, 10},
+        {1, 1, 2, 2, 3, 3, 4, 4},
+        {1, 2, 3, 4, 5, 6, 7, 8}
     };
 
     int *nums = NULL;
     int num;
     int *expect = NULL;
 
-    for (int i = 0; i < TEST_BUBBLE_SORT_CASE_NUM; i++) {
+    int tick1 = times(NULL);
 
-        nums = &numsArr[i][1];
-        num  =  numsArr[i][0];
+    for (int tryTimes = 0; tryTimes < 1000000; tryTimes++) {
+        for (int i = 0; i < TEST_BUBBLE_SORT_CASE_NUM; i++) {
 
-        sort_bubble(nums, num);
+            nums = &numsArr[i][1];
+            num  =  numsArr[i][0];
 
-        expect = expectArr[i];
+            sort_bubble(nums, num);
 
-        for (int j = 0; j < num; j++) {
-            if (nums[j] != expect[j]) {
-                printf("testCase[%d] execute failure expect [%d] = %d, actual = %d.\r\n", i, j, expect[j], nums[j]);
-                return -1;
+            expect = expectArr[i];
+
+            for (int j = 0; j < num; j++) {
+                if (nums[j] != expect[j]) {
+                    printf("testCase[%d] execute failure expect [%d] = %d, actual = %d.\r\n", i, j, expect[j], nums[j]);
+                    return -1;
+                }
             }
         }
     }
+
+    int tick2 = times(NULL);
+
+    printf("test_bubble_sort execute cost %d tick.\r\n", tick2 - tick1);
+
     return 0;
 }
