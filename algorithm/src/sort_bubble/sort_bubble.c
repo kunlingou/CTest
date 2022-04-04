@@ -40,6 +40,23 @@
 void sort_bubble(int* nums, int numsSize)
 {
     int tmp;
+
+    for (int i = 0; i < numsSize; i++) {
+        for (int j = 0; j < numsSize - i - 1; j++) {
+            if (nums[j] > nums[j + 1]) {
+                tmp = nums[j];
+                nums[j] = nums[j + 1];
+                nums[j + 1] = tmp;
+            }
+        }
+    }
+
+    return;
+}
+
+void sort_bubble1(int* nums, int numsSize)
+{
+    int tmp;
     for (int i = 0; i < numsSize; i++) {
         tmp = INT_INVALID_VAL;
         for (int j = 0; j < numsSize - i - 1; j++) {
@@ -83,14 +100,6 @@ void sort_bubble2(int* nums, int numsSize)
         if (tmp == INT_INVALID_VAL) {
             break;
         }
-#ifdef __DEBUG__
-        printf("nums: ");
-        for (int k = 0; k < numsSize; k++) {
-            printf("%d ", nums[k]);
-        }
-        printf("start = %d", start);
-        printf("\r\n");
-#endif
     }
 
     return;

@@ -5,9 +5,6 @@
  * 
  * https://www.runoob.com/data-structures/shell-sort.html
  */
-#ifdef __DEBUG__
-#include <stdio.h>
-#endif
 
 void sort_shell(int* nums, int numsSize)
 {
@@ -23,14 +20,7 @@ void sort_shell(int* nums, int numsSize)
                 nums[j] = tmp;
             }
         }
-#ifdef __DEBUG__
-        printf("nums: ");
-        for (int k = 0; k < numsSize; k++) {
-            printf("%d ", nums[k]);
-        }
-        printf("gap:%d", gap);
-        printf("\r\n");
-#endif
     }
 
+    return;
 }

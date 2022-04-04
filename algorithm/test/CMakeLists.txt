@@ -13,4 +13,5 @@ target_link_libraries(${BIN_NAME}
     sort_selection
     sort_insertion
     sort_shell
+    sort_quick
 )
