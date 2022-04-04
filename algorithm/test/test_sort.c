@@ -134,7 +134,7 @@ int __test_sort(int argc, char** argv)
 
 int test_sort(int argc, char** argv)
 {
-    printf("Test sorting algorithm:\r\n\r\n");
+    printf("Sorting algorithm performance test:\r\n\r\n");
 
     g_testPerfArrSize = 10;
     g_testPerfArrNum  = 100000;
