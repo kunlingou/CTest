@@ -1,3 +1,21 @@
+### 编译
+
+- release版本
+``` bash
+cd build
+chmod +x mkapp.sh
+chown -R paas:paas ..
+./mkapp.sh
+```
+
+- debug版本
+``` bash
+cd build
+chmod +x mkapp.sh
+chown -R paas:paas ..
+./mkapp.sh -d
+```
+
 ### 排序算法
 
 #### 冒泡排序
