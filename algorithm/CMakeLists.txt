@@ -7,7 +7,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 project(algorithm)
 
-add_definitions("-Wall -lpthread")
+add_definitions("-Wall -Werror -lpthread")
 
 if(${CMAKE_BUILD_TYPE} MATCHES "debug")
     add_definitions("-g -D __DEBUG__ -O0")
