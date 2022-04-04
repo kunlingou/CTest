@@ -13,11 +13,15 @@ do
     esac
 done
 
-rm -rf ../output/*
-rm -rf __cache__
+cd `dirname $0`
+cd ..
+PROJECT_ROOT_PATH=$(pwd)
 
-mkdir __cache__
-cd __cache__
+rm -rf ${PROJECT_ROOT_PATH}/output/*
+rm -rf ${PROJECT_ROOT_PATH}/build/__cache__
+mkdir ${PROJECT_ROOT_PATH}/build/__cache__
+
+cd ${PROJECT_ROOT_PATH}/build/__cache__
 cmake -D CMAKE_BUILD_TYPE=$BUILD_TYPE ../..
 make
 cd ..
@@ -25,8 +29,8 @@ rm -rf __cache__
 
 echo "==================run llt start====================="
 if [ $BUILD_TYPE == "debug" ]; then
-../output/test_main
+${PROJECT_ROOT_PATH}/output/test_main
 else
-../output/test_main
+${PROJECT_ROOT_PATH}/output/test_main
 fi
 echo "==================run llt end====================="

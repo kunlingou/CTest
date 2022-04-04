@@ -1,1 +1,4 @@
 add_subdirectory(sort_bubble)
+add_subdirectory(sort_selection)
+add_subdirectory(sort_insertion)
+add_subdirectory(sort_shell)

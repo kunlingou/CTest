@@ -14,7 +14,8 @@
         "random": "c",
         "typeinfo": "c",
         "functional": "c",
-        "sort_bubble.h": "c"
+        "sort_bubble.h": "c",
+        "sort_selection.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

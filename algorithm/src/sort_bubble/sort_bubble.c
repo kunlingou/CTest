@@ -31,6 +31,10 @@
  *     2. 每一轮获取当前轮次第1次替换的位置，下一次从当前位置-1处开始比较。 ---- 效果不好，实现参考sort_bubble2
  */
 
+#ifdef __DEBUG__
+#include <stdio.h>
+#endif
+
 #define INT_INVALID_VAL 0xFFFFFFFF
 
 void sort_bubble(int* nums, int numsSize)
@@ -53,7 +57,6 @@ void sort_bubble(int* nums, int numsSize)
         for (int k = 0; k < numsSize; k++) {
             printf("%d ", nums[k]);
         }
-        printf("start = %d", start);
         printf("\r\n");
 #endif
     }
