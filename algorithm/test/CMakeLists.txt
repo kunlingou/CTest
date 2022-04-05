@@ -14,4 +14,8 @@ target_link_libraries(${BIN_NAME}
     sort_insertion
     sort_shell
     sort_quick
+    sort_merge
+    sort_heap
+    sort_radix
+    sort_bucket
 )

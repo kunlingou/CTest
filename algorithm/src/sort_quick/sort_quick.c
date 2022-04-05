@@ -25,8 +25,6 @@ inline int paritition(int* nums, int left, int right)
     return left;
 }
 
-extern void sort_shell(int* nums, int numsSize);
-
 void __sort_quick(int* nums, int left, int right)
 {
     if (left < right) {
@@ -42,6 +40,8 @@ void sort_quick(int* nums, int numsSize)
 {
     __sort_quick(nums, 0, numsSize - 1);
 }
+
+extern void sort_shell(int* nums, int numsSize);
 
 void __sort_quick1(int* nums, int left, int right)
 {

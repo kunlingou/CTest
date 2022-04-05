@@ -114,14 +114,24 @@ extern void sort_selection(int* nums, int numsSize);
 extern void sort_shell(int* nums, int numsSize);
 extern void sort_quick(int* nums, int numsSize);
 extern void sort_quick1(int* nums, int numsSize);
+extern void sort_merge(int* nums, int numsSize);
+extern void sort_heap(int* nums, int numsSize);
+extern void sort_radix(int* nums, int numsSize);
+extern void sort_bucket(int* nums, int numsSize);
+extern void sort_bucket1(int* nums, int numsSize);
 
 int __test_sort(int argc, char** argv)
 {
-    printf("arr[size: %d, num: %d]\r\n", g_testPerfArrSize, g_testPerfArrNum);
+    printf("arr[max: %d, size: %d, num: %d]\r\n", RAND_MAX, g_testPerfArrSize, g_testPerfArrNum);
     printf("%20s %20s %20s\r\n", "name", "result", "costTick");
+    test_sort_one(argc, argv, "sort_bucket1",   sort_bucket1);
     test_sort_one(argc, argv, "sort_quick1",    sort_quick1);
     test_sort_one(argc, argv, "sort_quick",     sort_quick);
+    test_sort_one(argc, argv, "sort_bucket",    sort_bucket);
     test_sort_one(argc, argv, "sort_shell",     sort_shell);
+    test_sort_one(argc, argv, "sort_heap",      sort_heap);
+    test_sort_one(argc, argv, "sort_radix",     sort_radix);
+    test_sort_one(argc, argv, "sort_merge",     sort_merge);
     test_sort_one(argc, argv, "test_qsort",     test_qsort);
     test_sort_one(argc, argv, "sort_insertion", sort_insertion);
     test_sort_one(argc, argv, "sort_bubble",    sort_bubble);
@@ -149,11 +159,11 @@ int test_sort(int argc, char** argv)
     __test_sort(argc, argv);
 
     g_testPerfArrSize = 10000;
-    g_testPerfArrNum  = 100;
+    g_testPerfArrNum  = 10;
     __test_sort(argc, argv);
 
-    g_testPerfArrSize = 100000;
-    g_testPerfArrNum  = 10;
+    g_testPerfArrSize = 30000;
+    g_testPerfArrNum  = 1;
     __test_sort(argc, argv);
     return 0;
 }
