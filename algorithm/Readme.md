@@ -36,16 +36,27 @@ release version.
 Test sorting algorithm:
 
 arr[size: 10, num: 100000]
-                name               result             costTick
-         sort_quick1                   OK                    2
-          sort_quick                   OK                    3
-          sort_shell                   OK                    2
-          test_qsort                   OK                    3
-      sort_insertion                   OK                    3
-         sort_bubble                   OK                    3
-        sort_bubble1                   OK                    2
-        sort_bubble2                   OK                    4
-      sort_selection                   OK                    2
+┌──────────────┬──────┬──────┐
+│     name     │result│ cost │
+├──────────────┼──────┼──────┤
+│   sort_quick1│  OK  │     2│
+├──────────────┼──────┼──────┤
+│    sort_quick│  OK  │     3│
+├──────────────┼──────┼──────┤
+│    sort_shell│  OK  │     2│
+├──────────────┼──────┼──────┤
+│    test_qsort│  OK  │     3│
+├──────────────┼──────┼──────┤
+│sort_insertion│  OK  │     3│
+├──────────────┼──────┼──────┤
+│   sort_bubble│  OK  │     3│
+├──────────────┼──────┼──────┤
+│  sort_bubble1│  OK  │     2│
+├──────────────┼──────┼──────┤
+│  sort_bubble2│  OK  │     4│
+├──────────────┼──────┼──────┤
+│sort_selection│  OK  │     2│
+└──────────────┴──────┴──────┘
 
 arr[size: 100, num: 10000]
                 name               result             costTick
